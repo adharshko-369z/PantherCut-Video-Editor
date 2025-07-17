@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondFullStackProject</title>
+    <link href="pantherCut.css" rel="stylesheet">
+
+     <!-- Logo name font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Buttons and links font     -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <!-- header-start -->
+     <header>
+        <nav class="topNav">
+            <div class="logo">
+                PantherCut
+            </div>
+            <div class="profile">
+                <a href="#" class="profileLink">Profile</a>
+            </div>
+
+
+        </nav>
+        <nav class="secondNav">
+            <a href="#" class="navLinks">Project</a>
+            <a href="#" class="navLinks">Export</a>
+        </nav>
+     </header>
+     <!-- header-end -->
+
+     <!-- main-start -->
+
+     <main>
+        <div class="mainPannels">
+    <!-- upload-pannel-start -->
+
+            <div class="uploadPannel">
+                <button type="button" class="uploadFileButton" id="uploadFileButton">Upload Files</button>
+                <input type="file" id="inputFiles" multiple hidden>
+                <div class="fileList" id="fileList">"video file only"</div>
+            </div>
+    <!-- upload-pannel-end -->
+
+    <!-- screen-pannel-start -->
+            <div class="screenPannel">
+               
+
+            </div>
+    <!-- screen-pannel-end -->
+        </div>
+    <!-- tool-bar-start -->
+        <div class="toolBar">
+            <!-- <div>
+                <button type="button" class="scrollButton">&#8249;</button>
+            </div> -->
+            <button type="button" class="toolBarButton">undo</button>
+            <button type="button" class="toolBarButton">redo</button>
+            <button type="button" class="toolBarButton">cut</button>
+            <button type="button" class="toolBarButton">trim</button>
+            <button type="button" class="toolBarButton">delete</button>
+            <!-- <div>
+                <button type="button" class="scrollButton">&#8250;</button>
+            </div> -->
+        </div>
+    <!-- tool-bar-end -->
+
+     <!-- tracks-start -->
+        <div class="tracks">
+            <div class="videoTrackSection">
+                <div id="playhead"></div>
+                <div class="videoTrackHead">
+                    Video
+                </div>
+                <div class="trackScrollWrapper">
+                    <div class="videoTrack" id="videoTrack">
+                        <span id="trackMessage">“Drop a file here to begin editing”</span>
+
+                    </div>
+                </div>
+            </div>
+             <!-- <div class="audioTrackSection">
+                <div class="audioTrackHead">
+                    Audio
+                </div>
+                <div class="audioTrack">
+                    drag file into this track!!!!!
+                </div>
+                
+            </div> -->
+        </div>
+        
+      <!-- track-end -->
+     </main>
+
+     <!-- main-end -->
+
+
+
+
+
+<script src="pantherCut.js">
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/* root-start */
+
+html,body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #1E1E1E;
+    font-size: 16px;
+}
+
+/* root-end */
+
+/* top-navbar-start */
+
+.topNav{
+    display: flex;
+    background-color: black;
+    height:10vh;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    padding-left: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+
+
+.profile{
+    padding-right: 20px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.profileLink{
+    text-decoration:none;
+    color: white;
+    
+}
+
+/* top-navbar-end */
+
+/* second-navbar-start */
+
+.secondNav{
+    display: flex;
+    width: 100vw;
+    height: 6vh;
+    background-color: goldenrod;
+    justify-content:left;
+    align-items: center;
+    
+    
+   
+}
+
+.navLinks{
+    padding-left: 1.2rem;
+    text-decoration: none;
+    color:white;
+    font-family: 'inter';
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+
+.navLinks:hover{
+    color: black;
+}
+
+/* second-navbar-end */
+
+/* main-pannel-start */
+
+.mainPannels{
+    display:flex;
+    margin-top: 1.1rem ;
+
+}
+
+/* main-pannel-end */
+
+/* upload-pannel-start */
+
+.uploadPannel{
+    width: 40vw;
+    height: 40vh;
+    margin-left: 1.2rem;
+    background-color: #2A2A2A;
+    border-radius: 4px;
+    border: 3px black solid;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+
+.uploadFileButton{
+    width:100%;
+    height: 6vh;
+    border: 2px goldenrod dashed;
+    background-color: goldenrod;
+    color: white;
+    font-family: 'inter';
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.uploadFileButton:hover{
+    background-color: black;
+    color: goldenrod;
+    border: 2px black dashed;
+}
+
+#fileList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:.4em;
+    margin-top: 1rem;
+    overflow-y: auto;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#fileList::-webkit-scrollbar{
+    width: 0px;
+}
+
+.thumbnailBox{
+    width:calc(33.33%-.5rem);
+    max-width:9.3rem;
+    aspect-ratio: 3/2;
+    background-color: #111;
+    border-radius: 8px;
+    align-items: center;
+}
+
+
+.thumbnailBox video,
+.thumbnailBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+
+
+
+/* upload-pannel-end */
+
+/* screen-pannel-start */
+
+.screenPannel{
+    width: 60vw;
+    height: 40vh;
+    margin-right: 1.2rem;
+    background-color: #2A2A2A;
+    border-radius: 4px;
+    border: 3px black solid;
+    align-items: center;
+}
+
+/* screen-pannel-end */
+
+/* tool-bar-start */
+
+.toolBar{
+    display: flex;
+    width: 100vw;
+    height: 6vh;
+    background-color: goldenrod;
+    margin-top: 1.1rem;
+    align-items: center;
+   
+}
+
+.toolBarButton{
+   margin: .5rem 1rem .5rem 1rem ;
+   width: 50px;
+   background-color: black;
+   color: white;
+   border: 1px gold solid;
+   border-radius: 3px;
+   font-family: 'inter';
+   font-weight: 600;
+   font-size: .8rem;
+   margin-left: 1.2rem;
+   
+}
+
+.toolBarButton:hover{
+    background-color: gold;
+    color: black;
+    border: 1px goldenrod solid;
+}
+
+/* .scrollButton{
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    
+
+} */
+/* tool-bar-end */
+
+/* tracks-start */
+
+.tracks{
+    margin-top:1rem;
+   
+    
+}
+
+.videoTrackSection{
+    display: flex;
+    align-items: center;
+    border: 2px black solid;
+    /* width: 100%; */
+    height: 25vh;
+    background-color: #111;
+    position: relative;
+    /* overflow-x: scroll; */
+    white-space: nowrap;
+}
+
+/* #playhead{
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: red;
+    z-index: 10;
+    cursor: ew-resize;
+} */
+
+.videoTrackHead{
+    display: flex;
+    padding-left: 1rem;
+    width: 20vw;
+    height: 12vh;
+    background-color: goldenrod;
+    align-items: center;
+    font-family: 'inter';
+    font-weight: 600;
+    font-size: .8rem;
+    padding-left: 1.2rem;
+}
+
+.videoTrack{
+    display: flex;
+    /* width: 80vw; */
+    height: 12vh;
+    align-items: center;
+    padding-left: 0rem ;
+    gap:0;
+    background-color: #2A2A2A;
+    color: white;
+    white-space: nowrap;
+}
+
+
+
+#trackMessage{
+    background-color: inherit;
+}
+
+
+
+.trackItem{
+    /* height: 45px; */
+    /* width: 50PX; */
+    background-color: #2A2A2A;
+    flex-shrink: 0;
+    background-repeat: repeat-x;
+    /* border: 1px solid #555; */
+    border: 1px solid gold;
+    margin: 5px 0;
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    display: flex ;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    /* height: 100%; */
+
+}
+
+.trackItem video,.trackItem img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.trackScrollWrapper{
+    width: 80vw;
+    height: 12vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.trackScrollWrapper::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.trackScrollWrapper{
+    -ms-overflow-style: none;
+    stroke-width: none;
+}
+/* .audioTrackSection{
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+
+.audioTrackHead{
+    display: flex;
+    padding-left: 1rem;
+    width: 20vw;
+    height: 12vh;
+    background-color: aqua;
+    align-items: center;
+}
+
+.audioTrack{
+    display: flex;
+    width: 80vw;
+    height: 12vh;
+    align-items: center;
+    padding-left: 1rem ;
+    background-color: antiquewhite;
+} */
+/* tracks-end */
+
+
+@media  screen and (min-width:320px) and (max-width:768px) {
+
+.topNav{
+    height: 8vh;
+}
+
+.logo{
+    font-size: 1.2rem;
+}
+
+.profile{
+    font-size: .8rem;
+}
+
+.secondNav{
+    height: 4vh;
+}
+
+.navLinks{
+    font-size: .8rem;
+}
+
+.uploadFileButton{
+    font-size: .8rem;
+    
+}
+
+.toolBarButton{
+    margin-left: .6rem;
+}
+
+.videoTrack{
+    text-align: center;
+    font-size: .8rem;
+}
+
+
+}
