@@ -1,0 +1,93 @@
+PantherCut-projectTrackingList
+
+
+pages-
+
+✅workspace_page(index)
+project
+Export
+
+frontend-
+
+1.UI layout
+
+✅top navbar
+✅second navbar
+✅upload pannel
+✅screen pannel
+✅toolbar 
+✅video track
+
+2.Responsive
+
+mobile
+tablet
+✅desktop
+
+functions--
+
+3.Top navbar
+
+profile button
+
+4.Second navbar
+
+project(pages)
+Export(pages)
+
+5.Upload pannel
+✅upload file
+✅make it list
+✅file look like thumbnail
+✅draggable
+delete uploaded file
+
+6.Screen pannel
+customaized video screen
+pause play button
+seek bar
+full screen button
+
+7.Tool bar
+selection
+cut
+trim
+undo
+redo
+delete
+ratio
+
+8.video track
+playhead
+✅video track
+✅film strip
+
+
+export page-
+
+9.Form like
+
+project name
+location
+resolution
+file type
+export button
+
+project page-
+
+history of past project of users
+draft projects
+
+backend-
+
+after list when frontend complete
+
+
+
+
+
+
+
+
+
+
