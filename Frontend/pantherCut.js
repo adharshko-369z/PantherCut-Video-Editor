@@ -92,9 +92,18 @@ videoTrack.addEventListener("drop", (e) =>{
     //     trackBox.appendChild(img);
     // } else 
     if (type.startsWith("video")){
+
+    //   for Screen-panel
+        const videoPlayer = document.getElementById("videoPlayer");
+        videoPlayer.src= url;
+        videoPlayer.controls = true; // temprory controls
+        videoPlayer.currentTime=0;
+        videoPlayer.play();
+
+
+    // for video-track
         const video = document.createElement("video");
         video.src = url;
-        
 
         video.addEventListener("loadedmetadata",() =>{
             const duration = video.duration ||1;
@@ -174,37 +183,84 @@ videoTrack.addEventListener("drop", (e) =>{
             trackBox.style.backgroundSize = `${thumbWidth}px ${thumbHeight}px`;
             videoTrack.appendChild(trackBox);
 
+    // for screen-panel
+        const screenPlayer = document.getElementById("videoPlayer");
+        screenPlayer.src = url;
+        screenPlayer.onload = () => {};
+        screenPlayer.controls=false;
+        // screenPlayer.play();
+
+    // for custom-controls
+
+        const videoPlayer=document.getElementById("videoPlayer");
+        const playPauseBtn=document.getElementById("playPauseButton");
+        const rewindBtn=document.getElementById("rewindButton");
+        const forwardBtn=document.getElementById("forwardButton");
+        const seekBar=document.getElementById("seekbar");
+        const ratioSelect=document.getElementById("ratioSelect");
+        const fullScreenBtn=document.getElementById("fullScreen");
+
+        playPauseBtn.addEventListener("click", () =>{
+            if(videoPlayer.paused){
+                videoPlayer.play();
+                playPauseBtn.textContent="⏸️";
+            } else{
+                videoPlayer.pause();
+                playPauseBtn.textContent="▶️";
+            }
+        });
+    // update seekbar while playing
+        videoPlayer.addEventListener("timeupdate", () =>{
+            seekBar.value = videoPlayer.currentTime;
+        });
+
+        videoPlayer.addEventListener("loadedmetadata", ()=>{
+            seekBar.max = videoPlayer.duration;
+        });
+
+        seekBar.addEventListener("input", ()=>{
+            videoPlayer.currentTime = seekBar.value;
+        });
+    // forward&rewind btn
+        forwardBtn.addEventListener("click", ()=>{
+            videoPlayer.currentTime = Math.min(videoPlayer.duration,videoPlayer.currentTime+5);
+        });
+
+        rewindBtn.addEventListener("click", ()=>{
+            videoPlayer.currentTime = Math.max(0,videoPlayer.currentTime-5);
+        });
+
+        fullScreenBtn.addEventListener("click", ()=>{
+            if(!document.fullscreenElement){
+                videoPlayer.requestFullscreen();
+            }else{
+                document.exitFullscreen();
+            }
+        });
+
+    // ratio set 
+        function setAspectRatio(w,h){
+            const width = videoPlayer.clientWidth;
+            const height = width* (h/w);
+            videoPlayer.style.height = `${height}px`;
+        }    
+
+        const videoWrapper = document.querySelector(".videoWrapper");
+        ratioSelect.addEventListener("change", ()=>{
+            switch(ratioSelect.value){
+                case "youtube": videoWrapper.style.aspectRatio="16/9";
+                break;
+                case "shorts":  videoWrapper.style.aspectRatio="9/16";
+                break;
+                case "reel":  videoWrapper.style.aspectRatio="4/5";
+                break;
+            }
+        });
 
 
 
-            // playhead Setup
 
-            // const playhead = document.getElementById("playhead");
-            // const track = document.querySelector(".videoTrackSection");
-
-            // let isDragging = false;
-
-            // playhead.addEventListener("mousedown",() =>{
-            //     isDragging = true;
-            // });
-
-            // document.addEventListener("mouseup", () =>{
-            //     isDragging = false;
-            // });
-
-            // document.addEventListener("mousemove", (e) =>{
-            //     if(!isDragging) return;
-
-            //     const trackRect = track.getBoundingClientRect();
-            //     let newLeft = e.clientX - trackRect.left + track.scrollLeft;
-
-            //     const maxScroll = track.scrollWidth;
-
-            //     const clamepdX = Math.max(0,Math.min(newLeft,maxScroll));
-                
-            //     playhead.style.left = clamepdX + "px";
-            // });
-
+            
             
         });
 

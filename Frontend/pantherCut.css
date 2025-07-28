@@ -90,7 +90,7 @@ html,body{
 /* upload-pannel-start */
 
 .uploadPannel{
-    width: 40vw;
+    width: 30vw;
     height: 40vh;
     margin-left: 1.2rem;
     background-color: #2A2A2A;
@@ -151,7 +151,10 @@ html,body{
     height: 100%;
     object-fit: cover;
     display: block;
+    /* cursor: pointer; */
 }
+
+
 
 
 
@@ -163,16 +166,66 @@ html,body{
 
 /* screen-pannel-start */
 
-.screenPannel{
-    width: 60vw;
-    height: 40vh;
+.screenPanel{
+    width: 35vw;
+    height: 42vh;
     margin-right: 1.2rem;
     background-color: #2A2A2A;
     border-radius: 4px;
     border: 3px black solid;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    overflow-y: auto;
+   
 }
 
+.videoWrapper{
+    width: 100%;
+    aspect-ratio: 16/9;
+    
+    position: relative;
+}
+
+.videoPlayer{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    display: block;
+    
+}
+
+.customControls{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap:.5rem;
+    padding: .5rem;
+    background-color: #1a1a1a;
+    color: white;
+    border-top: 1px solid #444;
+    
+}
+
+.customControls button,
+.customControls select{
+    background-color: #333;
+    color: white;
+    border:none;
+    padding: .4rem .6rem;
+    border-radius: .2rem;
+    cursor: pointer;
+
+}
+
+.customControls input[type="range"]{
+    flex-grow: 1;
+    height: .2rem;
+    cursor: pointer;
+}
 /* screen-pannel-end */
 
 /* tool-bar-start */
@@ -274,6 +327,7 @@ html,body{
 
 
 #trackMessage{
+    padding-left: 1rem;
     background-color: inherit;
 }
 

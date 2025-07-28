@@ -43,10 +43,13 @@ Export(pages)
 delete uploaded file
 
 6.Screen pannel
-customaized video screen
-pause play button
-seek bar
-full screen button
+✅customaized video screen
+✅pause play button
+✅forward & rewind button
+✅seek bar
+✅full screen button
+layout button
+volume button
 
 7.Tool bar
 selection
