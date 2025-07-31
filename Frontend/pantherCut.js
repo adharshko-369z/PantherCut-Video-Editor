@@ -239,23 +239,24 @@ videoTrack.addEventListener("drop", (e) =>{
         });
 
     // ratio set 
-        function setAspectRatio(w,h){
-            const width = videoPlayer.clientWidth;
-            const height = width* (h/w);
-            videoPlayer.style.height = `${height}px`;
-        }    
+        // function setAspectRatio(w,h){
+        //     const width = videoPlayer.clientWidth;
+        //     const height = width* (h/w);
+        //     videoPlayer.style.height = `${height}px`;
+        // }    
 
-        const videoWrapper = document.querySelector(".videoWrapper");
-        ratioSelect.addEventListener("change", ()=>{
-            switch(ratioSelect.value){
-                case "youtube": videoWrapper.style.aspectRatio="16/9";
-                break;
-                case "shorts":  videoWrapper.style.aspectRatio="9/16";
-                break;
-                case "reel":  videoWrapper.style.aspectRatio="4/5";
-                break;
-            }
-        });
+       ratioSelect.addEventListener("change", () =>{
+        switch(ratioSelect.value){
+            case "youtube": videoPlayer.style.setProperty("aspect-ratio", "16/9");
+            break;
+            case "shorts": videoPlayer.style.setProperty("aspect-ratio", "9/16");
+            break;
+            case "reel": videoPlayer.style.setProperty("aspect-ratio", "4/5");
+            break;
+        }
+       });
+
+        
 
 
 

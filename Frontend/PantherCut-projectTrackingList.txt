@@ -48,8 +48,9 @@ delete uploaded file
 ✅forward & rewind button
 ✅seek bar
 ✅full screen button
-layout button
+✅aspect-ratio button
 volume button
+customize inside after full screen
 
 7.Tool bar
 selection
